@@ -38,15 +38,18 @@ AI Quizzer is a Flask-based web application that allows authenticated users to g
 4. Set up environment variables: Create a .env file in the root directory with the following variables:
     SECRET_KEY=your-secret-key
     DATABASE_URL=sqlite:///quizzer.db  # Or your production database URL
+   
     GROQ_API_KEY=your-groq-api-key
+   
     EMAIL_USER=your-email@gmail.com
+   
     EMAIL_PASS=your-email-password
 
-5. Runn the app locally(Flask Server)
+6. Runn the app locally(Flask Server)
     flask db upgrade  # For production with migration support
     python app_final.py  # For local testing
 
-6. Run on your Browser or Postman to interact with the API's
+7. Run on your Browser or Postman to interact with the API's
     http://127.0.0.1:5000/
 
 # API ENDPOINTS
