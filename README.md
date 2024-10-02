@@ -58,13 +58,18 @@ API Endpoints
 
 1. User Authentication
     Register: /register
+   
     POST: Register a new user.
+   
     Request body: { "username": "your_username", "password": "your_password" }
-2. Login: /login
+3. Login: /login
     POST: Log in to receive a JWT token.
+   
     Request body: { "username": "your_username", "password": "your_password" }
-3. Quiz Management
+   
+4. Quiz Management
 Generate Quiz: /generate-quiz
+
 
     POST (token required): Generate a quiz based on input parameters.
     Request body: {
@@ -76,9 +81,10 @@ Generate Quiz: /generate-quiz
 }
 
 
-4. Submit Quiz: /submit-quiz
+6. Submit Quiz: /submit-quiz
 
     POST (token required): Submit quiz answers for evaluation.
+   
     Request body:{
     "quizId": "quiz-id",
     "responses": [
@@ -88,17 +94,17 @@ Generate Quiz: /generate-quiz
 }
 
 
-5. Quiz History: /quiz-history
+7. Quiz History: /quiz-history
 
     GET (token required): Get quiz submission history.
 
-6. Retry Quiz: /retry-quiz/<quiz_id>
+8. Retry Quiz: /retry-quiz/<quiz_id>
 
     POST (token required): Retry a quiz with new questions.
 
 Other Routes
 
-7. Get Hint: /get-hint/<quiz_id>/<question_id>
+8. Get Hint: /get-hint/<quiz_id>/<question_id>
     GET (token required): Get a hint for a specific quiz question.
 
 ## Testing
