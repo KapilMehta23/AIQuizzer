@@ -1,0 +1,256 @@
+{
+	"info": {
+		"_postman_id": "abb34e67-b839-4079-9dbf-4d1c0f5ff9c4",
+		"name": "Kapil",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36364597",
+		"_collection_link": "https://x77777-9101.postman.co/workspace/727cc53d-1a0d-4091-9e05-fe35bfc46941/collection/36364597-abb34e67-b839-4079-9dbf-4d1c0f5ff9c4?action=share&source=collection_link&creator=36364597"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\":\"kapil\", \"password\":\"kapil\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\":\"kapil_mehta\", \"password\":\"kapil_mehta\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "JWT check",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoia2FwaWxfbWVodGEiLCJleHAiOjE3MjY1NjcxMjN9.oXVqpuu1WAUWE0MoDAEbFmmhTpbrld11AYuPclZQ5cc"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/protected",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"protected"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "generate quiz",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoia2FwaWxfbWVodGEiLCJleHAiOjE3MjY1NjcxMjN9.oXVqpuu1WAUWE0MoDAEbFmmhTpbrld11AYuPclZQ5cc"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"grade\": 5, \"subject\": \"Maths\", \"totalQuestions\": 10, \"maxScore\": 10, \"difficulty\": \"MEDIUM\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/generate-quiz",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"generate-quiz"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "submit quiz",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoiZmVuaWxyYW1vbGl5YTIxMDNAZ21haWwuY29tIiwiZXhwIjoxNzI2NTk0NDA1fQ.bREDNaMPAPqUoOB2D5ERrfxRPeAzaqoya6HD0wUnb9A"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"quizId\": \"2c1b27f5-935d-4507-b69d-e92f6efb997c\",\r\n    \"responses\": [\r\n        {\r\n            \"questionId\": \"6b1f31e2-66d4-442b-8758-6e7e3936196c\",\r\n            \"userResponse\": \"D\" \r\n        },\r\n        {\r\n            \"questionId\": \"c98d5b4d-af82-425d-865c-a89d933e4037\",\r\n            \"userResponse\": \"A\"\r\n        },\r\n        {\r\n            \"questionId\":\"d3c08f78-6649-4a46-a0c0-d3e984b9928d\",\r\n            \"userResponse\": \"C\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/submit-quiz",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"submit-quiz"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "history",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoia2FwaWxfbWVodGEiLCJleHAiOjE3MjY1NjcxMjN9.oXVqpuu1WAUWE0MoDAEbFmmhTpbrld11AYuPclZQ5cc"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/quiz-history?grade=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"quiz-history"
+					],
+					"query": [
+						{
+							"key": "grade",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "retry quiz",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoia2FwaWxfbWVodGEiLCJleHAiOjE3MjY1NjcxMjN9.oXVqpuu1WAUWE0MoDAEbFmmhTpbrld11AYuPclZQ5cc"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/retry-quiz/07bbd6c6-4c3e-4bba-9a10-2e4b84879a99",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"retry-quiz",
+						"07bbd6c6-4c3e-4bba-9a10-2e4b84879a99"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "hint",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoia2FwaWwiLCJleHAiOjE3MjY1ODM1NzV9.0r-lni4SjeC0i4jcWlC7jZQv0leIuIAcVG3KFqb--Zk"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/get-hint/1cf6a98d-83c2-410b-8b3c-4b5bd1205bf6/7c279ad8-5ef8-4868-a55b-0db51d1b174e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"get-hint",
+						"1cf6a98d-83c2-410b-8b3c-4b5bd1205bf6",
+						"7c279ad8-5ef8-4868-a55b-0db51d1b174e"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
